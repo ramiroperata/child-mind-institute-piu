@@ -127,7 +127,7 @@ Despues de experimentar con varias arquitecturas, hyperparametros, y estrategias
 root
 ├── notebook/       # Notebook de Jupyter para análisis y modelado
 ├── modelos/        # Modelos guardados
-├── LICENSE        # Licencia
+├── LICENSE         # Licencia
 └── README.md       # Documentación del proyecto
 ```
 
