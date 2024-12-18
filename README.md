@@ -62,6 +62,8 @@ Un autoencoder es una red neuronal que consta de dos componentes principales:
 1. **Codificador (Encoder)**: Transforma los datos de entrada en una representación de menor dimensión (espacio latente).
 2. **Decodificador (Decoder)**: Reconstruye los datos originales a partir de la representación comprimida.
 
+![Screenshot-2024-05-15-022904](https://github.com/user-attachments/assets/79514d05-034e-4f34-886a-fa8ef958ebfb)
+
 El objetivo es minimizar la **pérdida de reconstrucción**, como el error cuadrático medio (MSE), para aprender una representación compacta pero informativa de los datos.
 
 En este proyecto:
