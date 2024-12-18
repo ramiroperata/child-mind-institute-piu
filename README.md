@@ -94,7 +94,7 @@ El QWK se calcula como:
 $k=1-\frac{\sum_{i,j}w_{i,j}o_{i,j}}{\sum_{i,j}w_{i,j}e_{i,j}}\$
 
 Donde:
-- $(\ o_{i,j} ) \$: Matriz de concordancia observada.
+- $(\ o_{i,j}  \)$: Matriz de concordancia observada.
 - $(\ e_{i,j} ) \$: Matriz de concordancia esperada bajo el azar.
 - $(\ w_{i,j} ) \$: Pesos que penalizan los desacuerdos más grandes.
 
