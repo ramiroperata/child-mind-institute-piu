@@ -117,6 +117,8 @@ En este proyecto, el QWK se utilizó para:
 
 El ensamblado final logró un desempeño competitivo, demostrando la efectividad del enfoque combinado.
 
+Despues de experimentar con varias arquitecturas, hyperparametros, y estrategias de preprocesamiento, monitoreando las metricas de cada combinacion (En forma general y de cada modelo en particular), los mejores resultados fueron obtenidos con un Voting Regressor, compuesto por un LightGBM, XGBoostRegressor y CatBoostRegressor con el preprocesamiento e hyperparametros presentes en el notebook.
+
 ---
 
 ## Estructura del repositorio
