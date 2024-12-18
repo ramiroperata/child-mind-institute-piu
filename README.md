@@ -5,7 +5,7 @@ Bienvenido al repositorio de mi participación en la competencia **Child Mind In
 
 ---
 
-## Descripción del Proyecto
+## Descripción del proyecto
 
 El **Uso Problemático de Internet (PIU)** es una preocupación creciente, especialmente entre adolescentes. El objetivo de esta competencia es predecir los puntajes de severidad de PIU basados en datos de encuestas. El conjunto de datos incluye:
 
@@ -16,7 +16,7 @@ Este proyecto utiliza técnicas avanzadas de preprocesamiento, ingeniería de ca
 
 ---
 
-## Tabla de Contenidos
+## Tabla de contenidos
 
 1. [Análisis Exploratorio de Datos (EDA)](#análisis-exploratorio-de-datos)
 2. [Preprocesamiento](#preprocesamiento)
@@ -43,7 +43,7 @@ Visualizaciones y resúmenes estadísticos guiaron estas investigaciones, propor
 
 Pasos clave del preprocesamiento:
 
-1. **Imputación**: Se utilizó un `SimpleImputer` con la estrategia de mediana para manejar valores faltantes.
+1. **Imputación**: Se utilizó un `KNNImputer` para manejar valores faltantes.
 2. **Escalado**: Se aplicó una normalización estándar para garantizar compatibilidad entre las características.
 3. **Ingeniería de características**: Se extrajeron nuevos atributos, como resúmenes estadísticos y tendencias de los datos de series temporales.
 
@@ -51,7 +51,7 @@ Estos pasos garantizaron un conjunto de datos limpio, normalizado y enriquecido 
 
 ---
 
-## Autoencoder para Series Temporales
+## Autoencoder para series temporales
 
 Un **autoencoder** fue empleado para comprimir y reconstruir las características de las series temporales. Este modelo es especialmente útil para reducir la dimensionalidad de datos complejos mientras se preserva la información relevante.
 
@@ -73,7 +73,7 @@ En este proyecto:
 
 ---
 
-## Modelos y Enfoque de Modelado
+## Modelos y enfoque de modelado
 
 Se entrenó un conjunto diverso de modelos para predecir los puntajes de PIU, los que mejores resultados dieron fueron:
 
@@ -86,7 +86,7 @@ Cada modelo fue optimizado mediante ajuste de hiperparámetros y evaluado en un 
 
 ---
 
-## Métrica de Evaluación
+## Métrica de evaluación
 
 La métrica principal usada fue el **Quadratic Weighted Kappa (QWK)**, que mide el grado de concordancia entre dos conjuntos de clasificaciones ordinales, teniendo en cuenta la concordancia aleatoria.
 
@@ -119,19 +119,19 @@ El ensamblado final logró un desempeño competitivo, demostrando la efectividad
 
 ---
 
-## Estructura del Repositorio
+## Estructura del repositorio
 
 ```
 root
 ├── data/           # Datos crudos
-├── notebook/       # Notebooks de Jupyter para análisis y modelado
+├── notebook/       # Notebook de Jupyter para análisis y modelado
 ├── modelos/        # Modelos guardados
 └── README.md       # Documentación del proyecto
 ```
 
 ---
 
-## Futuro Trabajo
+## Futuro trabajo
 
 - Incorporar técnicas adicionales de ingeniería de características.
 - Experimentar con arquitecturas alternativas para el autoencoder.
