@@ -12,7 +12,7 @@ El **Uso Problemático de Internet (PIU)** es una preocupación creciente, espec
 - **Respuestas a encuestas**: Preguntas que evalúan comportamientos y tendencias.
 - **Características de series temporales**: Señales derivadas que capturan patrones en el tiempo.
 
-Este proyecto utiliza técnicas avanzadas de preprocesamiento, ingeniería de características y modelos en conjunto para lograr predicciones robustas. Entre las metodologías destacadas se encuentran el uso de un **autoencoder para series temporales** y la evaluación mediante la métrica **Quadratic Weighted Kappa (QWK)**.
+Este proyecto utiliza técnicas avanzadas de preprocesamiento, ingeniería de características y modelos en conjunto para lograr predicciones robustas. Entre las metodologías destacadas se encuentran el uso de un **autoencoder** para las series temporales y la evaluación mediante la métrica **Quadratic Weighted Kappa (QWK)**.
 
 ---
 
