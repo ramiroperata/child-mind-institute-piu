@@ -67,17 +67,18 @@ El objetivo es minimizar la **pérdida de reconstrucción**, como el error cuadr
 En este proyecto:
 
 - El autoencoder fue entrenado con la función de pérdida MSE.
-- Las características codificadas fueron utilizadas como entradas para los modelos de predicción, logrando una reducción de dimensionalidad efectiva y preservando patrones clave.
+- Las características codificadas fueron utilizadas como entradas para los modelos de predicción, logrando una reducción de dimensionalidad efectiva, imputando valores faltantes y preservando patrones clave.
 
 ---
 
 ## Modelos y Enfoque de Modelado
 
-Se entrenó un conjunto diverso de modelos para predecir los puntajes de PIU:
+Se entrenó un conjunto diverso de modelos para predecir los puntajes de PIU, los que mejores resultados dieron fueron:
 
-1. **TabNet**: Una arquitectura de red neuronal diseñada específicamente para datos tabulares.
-2. **LightGBM y XGBoost**: Frameworks de boosting de gradiente.
-3. **Regresor por votación (Voting Regressor)**: Combinación de predicciones de los modelos individuales para mejorar el desempeño.
+1. **CatBoostRegressor**: El cual usa un ordered boosting que crea múltiples permutaciones de los datos y entrena el modelo en un subconjunto mientras calcula los residuos en otro. Esta técnica ayuda a prevenir data leakage y sobreajustes.
+2. **LightGBM**: Utiliza un algoritmo basado en histogramas, es decir, agrupa valores de características continuas en contenedores discretos que agilizan el procedimiento de entrenamiento. Esto es muy conveniente debido al grado de experimentacion que fue necesario.
+3. **XGBoost**: Algoritmo muy flexible y potente.
+4. **Regresor por votación (Voting Regressor)**: Combinación de predicciones de los modelos individuales para mejorar el desempeño.
 
 Cada modelo fue optimizado mediante ajuste de hiperparámetros y evaluado en un conjunto de validación.
 
@@ -85,7 +86,7 @@ Cada modelo fue optimizado mediante ajuste de hiperparámetros y evaluado en un 
 
 ## Métrica de Evaluación
 
-La métrica principal de la competencia es el **Quadratic Weighted Kappa (QWK)**, que mide el grado de concordancia entre dos conjuntos de clasificaciones ordinales, teniendo en cuenta la concordancia aleatoria.
+La métrica principal usada fue el **Quadratic Weighted Kappa (QWK)**, que mide el grado de concordancia entre dos conjuntos de clasificaciones ordinales, teniendo en cuenta la concordancia aleatoria.
 
 ### Fórmula
 
@@ -110,9 +111,7 @@ En este proyecto, el QWK se utilizó para:
 ---
 
 ## Resultados
-
-- **QWK en entrenamiento**: XX.XX
-- **QWK en validación**: XX.XX
+- **QWK en validación**: 0.463
 
 El ensamblado final logró un desempeño competitivo, demostrando la efectividad del enfoque combinado.
 
@@ -122,10 +121,9 @@ El ensamblado final logró un desempeño competitivo, demostrando la efectividad
 
 ```
 root
-├── data/           # Datos crudos y procesados
-├── notebooks/      # Notebooks de Jupyter para análisis y modelado
-├── models/         # Modelos guardados
-├── utils/          # Scripts utilitarios
+├── data/           # Datos crudos
+├── notebook/       # Notebooks de Jupyter para análisis y modelado
+├── modelos/        # Modelos guardados
 └── README.md       # Documentación del proyecto
 ```
 
